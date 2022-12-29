@@ -1,4 +1,4 @@
-const { app, autoUpdater, BrowserWindow } = require('electron');
+const { app, autoUpdater, BrowserWindow, dialog } = require('electron');
 const path = require('path');
 const config = require("../src/config/config.json");
 

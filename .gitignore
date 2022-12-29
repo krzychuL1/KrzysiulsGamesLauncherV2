@@ -1,6 +1,7 @@
 # ignore dist folder
 dist/*
-
+dist/win-unpacked/*
+dist/krzysiulsgameslauncher Setup 1.0.0.exe
 # igore node_modules
 node_modules/*
 
