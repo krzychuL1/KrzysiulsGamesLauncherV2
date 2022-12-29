@@ -1,0 +1,8 @@
+# ignore dist folder
+dist/*
+
+# igore node_modules
+node_modules/*
+
+# ignore config autoupdate
+src/config/config.json
