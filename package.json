@@ -12,6 +12,11 @@
     "lint": "echo \"No linting configured\"",
     "build": "electron-builder"
   },
+  "repository": "https://github.com/krzychuL1/KrzysiulsGamesLauncherV2",
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
   "build": {
     "appId": "KrzysiulsGamesLauncher",
     "win": {
