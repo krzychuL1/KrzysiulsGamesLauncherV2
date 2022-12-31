@@ -1,7 +1,7 @@
 {
   "name": "krzysiulsgameslauncher",
   "productName": "krzysiulsgameslauncher",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
@@ -12,10 +12,9 @@
     "lint": "echo \"No linting configured\"",
     "build": "electron-builder"
   },
-  "repository": "https://github.com/krzychuL1/KrzysiulsGamesLauncherV2",
-  "publish": {
-    "provider": "github",
-    "releaseType": "release"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzychuL1/KrzysiulsGamesLauncherV2.git"
   },
   "build": {
     "appId": "KrzysiulsGamesLauncher",

@@ -1,6 +1,7 @@
 const { app, autoUpdater, BrowserWindow, dialog } = require('electron');
+const { cp } = require('fs');
 const path = require('path');
-//const config = require("../src/config/config.json");
+const config = require("../src/config/config.json");
 
 Object.defineProperty(app, 'isPackaged', {
   get() {
@@ -51,15 +52,24 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
-  autoUpdater.checkForUpdates()
+
 });
 
-
-
+autoUpdater.setFeedURL({
+  url: 'https://github.com/krzychuL1/KrzysiulsGamesLauncherV2',
+  provider: 'github',
+  headers: {
+    'Authorization': `${config.gittoken}`,
+  },
+  params: {
+    'release': 'latest',
+  },
+});
 
 setInterval(() => {
-  autoUpdater.checkForUpdates()
-}, 60000)
+autoUpdater.checkForUpdates()
+}, 2000)
+
 
 
 autoUpdater.on('update-available', (info) => {
