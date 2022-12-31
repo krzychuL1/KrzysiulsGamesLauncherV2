@@ -25,12 +25,11 @@
       "icon": "icon.ico"
     },
     "nsis": {
-      "oneClick": false,
+      "oneClick": true,
       "installerIcon": "icon.ico",
       "uninstallerIcon": "icon.ico",
-      "uninstallDisplayName": "krzysiulsgameslauncher-uninstaller",
-      "license": "license.md",
-      "allowToChangeInstallationDirectory": true
+      "uninstallDisplayName": "krzysiulsgameslauncher uninstaller",
+      "allowToChangeInstallationDirectory": false
     }
   },
   "keywords": [],
