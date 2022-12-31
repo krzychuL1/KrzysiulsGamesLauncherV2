@@ -56,7 +56,7 @@ app.on('activate', () => {
 
 });
 
-autoUpdater.checkForUpdatesAndNotify()
+autoUpdater.checkForUpdates()
 
 
 
