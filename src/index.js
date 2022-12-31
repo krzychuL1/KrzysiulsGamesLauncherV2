@@ -1,7 +1,8 @@
-const { app, autoUpdater, BrowserWindow, dialog } = require('electron');
+const { app, BrowserWindow, dialog } = require('electron');
 const { cp } = require('fs');
 const path = require('path');
 const config = require("../src/config/config.json");
+const {autoUpdater} = require('electron-updater');
 
 Object.defineProperty(app, 'isPackaged', {
   get() {
@@ -56,10 +57,10 @@ app.on('activate', () => {
 });
 
 autoUpdater.setFeedURL({
-  url: 'https://github.com/krzychuL1/KrzysiulsGamesLauncherV2',
+  url: `https://github.com/krzychuL1/KrzysiulsGamesLauncherV2`,
   provider: 'github',
   headers: {
-    'Authorization': `${config.gittoken}`,
+    'Authorization': config.gittoken,
   },
   params: {
     'release': 'latest',
