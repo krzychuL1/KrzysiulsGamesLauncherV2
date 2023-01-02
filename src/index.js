@@ -24,18 +24,24 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1405,
+    height: 669,
+    frame: true,
+    autoHideMenuBar: true,
+    resizable: false,
     webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: true,
       preload: path.join(__dirname, 'preload.js'),
       
     },
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, 'index.html'));
+  mainWindow.loadFile(path.join(__dirname, 'html/index.html'));
 
-  autoUpdater.checkForUpdates();
+  // Włącz/Wyłącz sprawdzanie aktualizacji
+  //autoUpdater.checkForUpdates();
   
   autoUpdater.on('update-available', (info) => {
   })
