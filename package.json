@@ -1,9 +1,13 @@
 {
   "name": "krzysiulsgameslauncher",
-  "productName": "krzysiulsgameslauncher",
+  "productName": "KrzysiulsGamesLauncher",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/krzychuL1/KrzysiulsGamesLauncherV2.git"
+  },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -11,10 +15,6 @@
     "publish": "electron-builder --win -p always",
     "lint": "echo \"No linting configured\"",
     "build": "electron-builder"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/krzychuL1/KrzysiulsGamesLauncherV2.git"
   },
   "build": {
     "appId": "KrzysiulsGamesLauncher",
@@ -25,12 +25,11 @@
       "icon": "icon.ico"
     },
     "nsis": {
-      "oneClick": false,
+      "oneClick": true,
       "installerIcon": "icon.ico",
       "uninstallerIcon": "icon.ico",
-      "uninstallDisplayName": "krzysiulsgameslauncher-uninstaller",
-      "license": "license.md",
-      "allowToChangeInstallationDirectory": true
+      "uninstallDisplayName": "krzysiulsgameslauncher uninstaller",
+      "allowToChangeInstallationDirectory": false
     }
   },
   "keywords": [],
